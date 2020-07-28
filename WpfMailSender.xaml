@@ -157,7 +157,7 @@
                                 <TextBlock Width="100">
                                 Сервер:
                                 </TextBlock>
-                                <ComboBox Width="100"
+                                <!--<ComboBox Width="100"
                                           Name="cbServerSelect"
                                           ItemsSource="{x:Static local:Senders.ServersDictionary}" Margin="0" VerticalAlignment="Bottom"
                                 >
@@ -166,7 +166,7 @@
                                             <TextBlock Text="{Binding Key}"></TextBlock>
                                         </DataTemplate>
                                     </ComboBox.ItemTemplate>
-                                </ComboBox>
+                                </ComboBox>-->
                                 <Button Width="20">
                                     <Image Source="scr/icons8-плюс-64.png"></Image>
                                 </Button>

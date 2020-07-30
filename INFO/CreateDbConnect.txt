@@ -1,0 +1,31 @@
+﻿Создаем подключение к БД с помощью LINQ To SQL:
+1. Создать БД, создать таблицу в БД, подключить БД в Обозревателе серверов
+2. Создаем новый элемент (Ctrl + Shift + A): Данные\Классы LINQ To SQL
+3. Перетаскиваем нашу таблицу в объект, созданный в пункте 2
+	3.1. Жмяк в пустую область\Перейти к коду => Попадаем в DataClasses1.designer.cs (DataClasses1 м.б. другое имя)
+	3.2. К этому классу будем обращаться для работы с БД
+4. Создаем новый элемент (Ctrl + Shift + A): Visual C#\Класс (имя DataBase)
+Пример класса DataBase:
+-----------------------------------------------
+	 internal static class DataBase
+    {
+        private static readonly DataClasses1DataContext 
+            emailsDataConxt = new DataClasses1DataContext();
+
+        // перебирает свойства Emails и возвращает коллекцию
+        public static IQueryable<Email> Emails => from email in 
+            emailsDataConxt.Email 
+            select email;
+    }
+-----------------------------------------------
+5. В разметке Xaml прописывам источник данных:
+-----------------------------------------------
+    <!--Привязываем данные из БД к DataGrid-->
+    <DataGrid   
+        Grid.Row="1" 
+        Grid.ColumnSpan="2"
+        Height="300"
+        ItemsSource="{x:Static local:DataBase.Emails}" // Биндинг тут!
+        AutoGenerateColumns="False"
+        IsReadOnly="True">
+-----------------------------------------------

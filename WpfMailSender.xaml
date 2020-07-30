@@ -22,6 +22,7 @@
 
     <Window.Resources>
         <ResourceDictionary>
+            <!--Привязываем тему-->
             <ResourceDictionary.MergedDictionaries>
                 <!--<ResourceDictionary Source ="Themes/BureauBlue/Theme.xaml"></ResourceDictionary>-->
             </ResourceDictionary.MergedDictionaries>
@@ -130,10 +131,13 @@
                                 <TextBlock Width="100">
                             Отправитель:
                                 </TextBlock>
+                                <!--Привязываем данные из БД к ComboBox-->
                                 <ComboBox Width="100"
                                           Name="cbSenderSelect"
                                           ItemsSource="{x:Static local:Senders.SendersDictionary}" Margin="0" VerticalAlignment="Bottom"
                                           >
+                                    <!--Описываем шаблон ComboBox.Item-->
+                                    <!--Тащим данные из Dictionary в выпадающий список-->
                                     <ComboBox.ItemTemplate>
                                         <DataTemplate>
                                             <TextBlock Text="{Binding Key}"></TextBlock>
@@ -157,10 +161,13 @@
                                 <TextBlock Width="100">
                                 Сервер:
                                 </TextBlock>
+                                <!--Привязываем данные из БД к ComboBox-->
                                 <ComboBox Width="100"
                                           Name="cbServerSelect"
                                           ItemsSource="{x:Static local:Senders.ServersDictionary}" Margin="0" VerticalAlignment="Bottom"
                                 >
+                                    <!--Описываем шаблон ComboBox.Item-->
+                                    <!--Тащим данные из Dictionary в выпадающий список-->
                                     <ComboBox.ItemTemplate>
                                         <DataTemplate>
                                             <TextBlock Text="{Binding Key}"></TextBlock>
@@ -207,12 +214,14 @@
                         </ToolBarTray>
                     </StackPanel>
 
-                    <DataGrid Grid.Row="1"
+                    <!--Привязываем данные из БД к DataGrid-->
+                    <DataGrid Grid.Row="1" 
                               Grid.ColumnSpan="2"
                               Height="300"
                               ItemsSource="{x:Static local:DataBase.Emails}"
                               AutoGenerateColumns="False"
                               IsReadOnly="True">
+                        <!--Описываем столбцы DataGrid-->
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="#" Binding="{Binding Id}"/>
                             <DataGridTextColumn Header="Почта" Binding="{Binding Email}"/>

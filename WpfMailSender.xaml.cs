@@ -51,5 +51,10 @@ namespace MailSender
         {
 
         }
+
+        private void Planer_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -181,6 +181,8 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="scr\icons8-лист-бумаги-64.png" />
+    <Resource Include="scr\icons8-будильник-64.png" />
     <Resource Include="INFO\CreateDbConnect.txt" />
     <Content Include="MailSenderDb.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

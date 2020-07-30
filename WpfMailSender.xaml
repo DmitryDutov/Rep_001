@@ -193,9 +193,11 @@
                                 <TextBlock Width="100">
                                 Планировщик:
                                 </TextBlock>
-                                <Button Width="20">Q</Button>
-                                <!--Будильник-->
-                            </ToolBar>
+                                <Button Width="20" Click="Button_Click_1">
+                                    <Image Source="scr/icons8-будильник-64.png"></Image>
+
+                                </Button>
+                                </ToolBar>
                         </ToolBarTray>
 
                         <ToolBarTray>
@@ -204,12 +206,20 @@
                                 Список адресатов:
                                 </TextBlock>
 
-                                <Button Width="20">|</Button>
-                                <!--| в круге-->
-                                <Button Width="20">v</Button>
+                                <!--Лист-->
+                                <Button Width="20">
+                                    <Image Source="scr/icons8-лист-бумаги-64.png"></Image>
+                                </Button>
+
                                 <!--Галочка -->
-                                <Button Width="20">0</Button>
+                                <Button Width="20">
+                                    <Image Source="scr/icons8-проверено-64.png"></Image>
+                                </Button>
+                                
                                 <!--Пустой кружок-->
+                                <Button Width="20">
+                                    <Image Source="scr/icons8-отмена-64.png"></Image>
+                                </Button>
                             </ToolBar>
                         </ToolBarTray>
                     </StackPanel>

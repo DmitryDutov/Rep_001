@@ -1,0 +1,15 @@
+﻿https://habr.com/ru/post/153225/ Как два программиста хлеб пекли
+https://d2xzmw6cctk25h.cloudfront.net/asset/1585334/attachment/f5dd1c47a3f640b2c35e23cd6937344a.png Паттерн ВБК
+https://habr.com/ru/post/338518/ MVVM: полное понимание (+WPF) Часть 1
+https://habr.com/ru/post/339538/ MVVM: полное понимание (+WPF) Часть 2
+https://habr.com/ru/post/242613/ Пишите чистый код с Реактивными Расширениями (Reactive Extensions)
+https://nesteruk.wordpress.com/2010/03/18/intro-to-rx/ Обзор Реактивных Расширений (Reactive Extensions, Rx)
+https://github.com/dotnet/reactive reactive
+https://github.com/sschmid/Entitas-CSharp Entitas-CSharp
+https://habr.com/ru/post/166287/ Анти-паттерны
+https://habr.com/ru/post/270005/ Service Locator нарушает инкапсуляцию
+https://metanit.com/sharp/wpf/21.1.php SQLite в WPF
+https://metanit.com/sharp/wpf/19.1.php Взаимодействие с базой данных
+https://professorweb.ru/my/entity-framework/6/level3/3_5.php Вставка данных
+https://metanit.com/sharp/wpf/13.php DependencyObject и свойства зависимостей
+https://d2xzmw6cctk25h.cloudfront.net/asset/1985179/attachment/b2ff968828cf81018c4f398f25060490.zip Приложение калькулятор MVVM и Рассыльщик(Урок 2)

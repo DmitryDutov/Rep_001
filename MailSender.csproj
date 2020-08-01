@@ -202,6 +202,7 @@
     <Resource Include="scr\icons8-лист-бумаги-64.png" />
     <Resource Include="scr\icons8-будильник-64.png" />
     <Resource Include="INFO\CreateDbConnect.txt" />
+    <Resource Include="INFO\Links.txt" />
     <Content Include="MailSenderDb.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

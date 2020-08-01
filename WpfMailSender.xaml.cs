@@ -54,7 +54,8 @@ namespace MailSender
 
         private void Planer_SelectionChanged(object sender, RoutedEventArgs e)
         {
-
+            //tcTabControl.SelectedItem = TabControl.Items[1]; // по индексу
+            tcTabControl.SelectedItem = tiPlaner; // по имени
         }
     }
 }

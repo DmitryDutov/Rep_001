@@ -11,7 +11,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:MailSender"
+        xmlns:local="clr-namespace:MailSender" 
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d"
         Title="Рассыльщик" 
         Height="800" 
@@ -50,7 +51,7 @@
             <MenuItem Header="Help"></MenuItem>
         </Menu>
 
-        <TabControl Grid.Row="1" Grid.ColumnSpan="2">
+        <TabControl Grid.Row="1" Grid.ColumnSpan="2"  x:Name="tcTabControl">
             <TabItem Header="Sender Group" x:Name="MainItem">
                 <!--<DockPanel>
                     <StackPanel DockPanel.Dock="Left">
@@ -193,10 +194,10 @@
                                 <TextBlock Width="100">
                                 Планировщик:
                                 </TextBlock>
-                                <Button Width="20" Click="Button_Click_1">
-                                    <Image Source="scr/icons8-будильник-64.png"></Image>
-
-                                </Button>
+                                    <Button Width="20" 
+                                            Click="Planer_SelectionChanged">
+                                        <Image Source="scr/icons8-будильник-64.png"></Image>
+                                    </Button>
                                 </ToolBar>
                         </ToolBarTray>
 
@@ -242,15 +243,42 @@
             </TabItem>
 
             <TabItem Header="Planer"
+                     x:Name="tiPlaner"
                      >
                 <ScrollViewer Height="300"
                               HorizontalAlignment="Stretch">
-                    <DockPanel>
-                        <Calendar HorizontalAlignment="Left"
-                                  x:Name="PlanerCalendar"
-                                  >
+                    <DockPanel Width="180" 
+                               HorizontalAlignment="Left">
+                        <StackPanel>
+                            <Calendar x:Name="PlanerCalendar"
+                                      Background="WhiteSmoke">
+                            </Calendar>
 
-                        </Calendar>
+                            <xctk:TimePicker x:Name="TpTimePicker" 
+                                             Text="{Binding TpTimePicker}" 
+                                             Margin="0,2,0,2" />
+                            <Button Click="Planer_SelectionChanged">
+                                <WrapPanel >
+                                    <Image Source="scr/icons8-будильник-64.png"
+                                           Width="20"
+                                           Margin="1,0,1,0"
+                                           >
+                                    </Image>
+                                    <TextBlock>Запланировать</TextBlock>
+                                </WrapPanel>
+                            </Button>
+
+                            <Button Click="Planer_SelectionChanged">
+                                <WrapPanel >
+                                    <Image Source="scr/icons8-отправить-64.png"
+                                           Width="20"
+                                           Margin="1,0,1,0"
+                                           >
+                                    </Image>
+                                    <TextBlock>Отправить</TextBlock>
+                                </WrapPanel>
+                            </Button>
+                        </StackPanel>
 
                         <RichTextBox VerticalAlignment="Stretch" 
                                      Grid.ColumnSpan="2"

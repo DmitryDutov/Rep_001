@@ -12,9 +12,9 @@
   See http://www.galasoft.ch/mvvm
 */
 
-using GalaSoft.MvvmLight;
+using CommonServiceLocator;
 using GalaSoft.MvvmLight.Ioc;
-using Microsoft.Practices.ServiceLocation;
+using MailSender.Services;
 
 namespace MailSender.ViewModel
 {
@@ -31,31 +31,27 @@ namespace MailSender.ViewModel
         {
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
 
-            ////if (ViewModelBase.IsInDesignModeStatic)
-            ////{
-            ////    // Create design time view services and models
-            ////    SimpleIoc.Default.Register<IDataService, DesignDataService>();
-            ////}
-            ////else
-            ////{
-            ////    // Create run time view services and models
-            ////    SimpleIoc.Default.Register<IDataService, DataService>();
-            ////}
-
             SimpleIoc.Default.Register<MainViewModel>();
+            SimpleIoc.Default.Register<IDataAccessService, DataBaseAccessService>();
         }
 
-        public MainViewModel Main
-        {
-            get
-            {
-                return ServiceLocator.Current.GetInstance<MainViewModel>();
-            }
-        }
+        ////if (ViewModelBase.IsInDesignModeStatic)
+        ////{
+        ////    // Create design time view services and models
+        ////    SimpleIoc.Default.Register<IDataService, DesignDataService>();
+        ////}
+        ////else
+        ////{
+        ////    // Create run time view services and models
+        ////    SimpleIoc.Default.Register<IDataService, DataService>();
+        ////}
         
+        public MainViewModel Main => ServiceLocator.Current.GetInstance<MainViewModel>();
+
         public static void Cleanup()
         {
             // TODO Clear the ViewModels
         }
     }
+    
 }

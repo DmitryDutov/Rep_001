@@ -1,4 +1,5 @@
 using GalaSoft.MvvmLight;
+using System.Collections.ObjectModel;
 
 namespace MailSender.ViewModel
 {
@@ -30,5 +31,27 @@ namespace MailSender.ViewModel
             ////    // Code runs "for real"
             ////}
         }
+
+        ObservableCollection<Email> _Emails;
+
+        public ObservableCollection<Email> Emails
+        {
+            get { return _Emails; }
+            set
+            {
+                _Emails = value;
+                RaisePropertyChanged(nameof(Emails));
+            }
+        }
+
+        //void GetEmails()
+        //{
+        //    Emails.Clear();
+        //    foreach (var item in _serviceProxy.GetEmails())
+        //    {
+        //        Emails.Add(item);
+        //    }
+        //}
+
     }
 }

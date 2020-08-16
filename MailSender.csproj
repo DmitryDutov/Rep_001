@@ -118,6 +118,7 @@
     </Compile>
     <Compile Include="MyConstClass.cs" />
     <Compile Include="Senders.cs" />
+    <Compile Include="Services\DataAccessService.cs" />
     <Compile Include="Trash\Sender.cs" />
     <Compile Include="Trash\Test.cs" />
     <Page Include="Themes\BureauBlue\Theme.xaml">

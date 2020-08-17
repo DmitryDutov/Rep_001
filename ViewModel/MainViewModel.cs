@@ -43,6 +43,5 @@ namespace MailSender.ViewModel
             ReadAllCommand = new RelayCommand(GetEmails); // Можно реализовать команду старым способом
         }
 
-
     }
 }

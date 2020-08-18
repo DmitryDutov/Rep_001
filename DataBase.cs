@@ -15,5 +15,6 @@ namespace MailSender
         public static IQueryable<Email> Emails => from email in 
             emailsDataConxt.Email 
             select email;
+
     }
 }
